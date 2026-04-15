@@ -147,9 +147,17 @@
             padding-bottom: 5%;
         }
 
-        .about-section .image-wrapper {
-            padding-left: 5%;
-            width: 100%;
-        }
+       .about-section .image-wrapper {
+    z-index: 2;
+    flex-shrink: 0; /* Evita que la pantalla aplaste el contenedor */
+    
+    img {
+        width: 220px !important;
+        height: 220px !important;
+        aspect-ratio: 1 / 1 !important; /* Fuerza a que sea un cuadrado matemáticamente perfecto */
+        object-fit: cover !important;
+        border-radius: 50% !important;
+    }
+}
     }
 }
